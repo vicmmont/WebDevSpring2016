@@ -1,1 +1,1 @@
-# WebDevSpring2016
+This repository will contain all assignments for Web Development at Northeastern University for Spring 2016.
