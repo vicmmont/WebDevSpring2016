@@ -10,11 +10,12 @@
 
 	<!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 </head>
 
 <body>
 	<!-- Navigation Bar -->
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 	<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -30,8 +31,12 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="nav-bar-collapse">
 		  <ul class="nav navbar-nav navbar-right">
-		    <li><a href="#">Register</a></li>
-		    <li><a href="#">Login</a></li>
+		  	<li class="visible-xs-inline"><a href="#">Home</a></li>
+		    <li class="visible-xs-inline"><a href="profile.html">Profile</a></li>
+		    <li class="visible-xs-inline"><a href="admin.html">Admin</a></li>
+		    <li class="visible-xs-inline"><a href="forms.html">Forms</a></li>
+		    <li><a href="register.html">Register</a></li>
+		    <li><a href="login.html">Login</a></li>
 		    <li><a href="#">Username</a></li>
 		    <li><a href="#">Logout</a></li>
 		  </ul>
@@ -42,15 +47,15 @@
 	<!-- Sidebar and Main Content -->
 	<div class="container-fluid">
     	<div class="row">
-        	<div class="col-sm-3 col-md-2 sidebar">
+        	<div class="col-sm-3 col-md-2 sidebar" id="side-bar-collapse">
           		<ul class="nav nav-sidebar">
-		            <li><a href="#">Home</a></li>
-		            <li><a href="#">Profile</a></li>
-		            <li><a href="#">Admin</a></li>
-		            <li><a href="#">Forms</a></li>
+		            <li class="active"><a href="#">Home</a></li>
+		            <li><a href="profile.html">Profile</a></li>
+		            <li><a href="admin.html">Admin</a></li>
+		            <li><a href="forms.html">Forms</a></li>
           		</ul>
          	</div>
-         	<div class="col-sm-9 cold-md-10 main">
+         	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
          		<h1>Welcome!</h1>
          		<p>
          			Lorem ipsum dolor sit amet, a curabitur ipsum blandit mauris, at turpis qui sapien, neque commodo imperdiet, ligula nulla, lorem elit ultricies. Morbi autem, sit phasellus, interdum volutpat mollis aliquam posuere amet euismod, magni elementum ipsum velit ullamcorper arcu, dignissim commodo. Vitae suspendisse mauris sodales praesent et, etiam volutpat vel interdum augue, phasellus sed etiam adipiscing nunc, mauris purus eros molestie porttitor, magna et dis lorem aliquet massa nunc. Et in viverra qui, eros erat sem eu neque hymenaeos, tellus nascetur pede at dictum. Eu aut odio, ac vestibulum aliquam per augue luctus pellentesque, in egestas wisi nunc, pellentesque purus nisl donec vel, quis feugiat euismod lorem mollis accumsan. Praesent nec vel porttitor volutpat nec orci, leo urna pede nulla feugiat, cras est bibendum et. Fermentum turpis montes purus quisque lacinia ligula, semper turpis vitae aliquam sem, elementum nulla, sociis mi nec non nec. Vitae suspendisse mauris sodales praesent et, etiam volutpat vel interdum augue, phasellus sed etiam adipiscing nunc, mauris purus eros molestie porttitor, magna et dis lorem aliquet massa nunc. Et in viverra qui, eros erat sem eu neque hymenaeos, tellus nascetur pede at dictum. Eu aut odio, ac vestibulum aliquam per augue luctus pellentesque, in egestas wisi nunc, pellentesque purus nisl donec vel, quis feugiat euismod lorem mollis accumsan. Praesent nec vel porttitor volutpat nec orci, leo urna pede nulla feugiat, cras est bibendum et. Fermentum turpis montes purus quisque lacinia ligula, semper turpis vitae aliquam sem, elementum nulla, sociis mi nec non nec.
@@ -62,7 +67,7 @@
 	    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="www.ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="www.maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
