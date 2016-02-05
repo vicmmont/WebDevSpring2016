@@ -11,6 +11,7 @@
 	<!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -58,12 +59,12 @@
          		<h1>Forms</h1>
 
                 <ul class="nav nav-tabs">
-                    <li role="presentation"><a href="forms.html">Forms</a></li>
-                    <li role="presentation" class="active"><a href="#">Fields</a></li>
+                    <li role="presentation"><a class="tabText" href="forms.html">Forms</a></li>
+                    <li role="presentation" class="active"><a class="tabText" href="#">Fields</a></li>
                 </ul>
 
          		<div class="container-fluid">
-                    <div class="row">
+                    <div class="row topForm">
                         <div class="col-xs-9">
                             <form>
                                 <div class="form-group">
@@ -73,10 +74,10 @@
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-pencil"></a>
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
-                            <a href="#" class="glyphicon glyphicon-remove"></a>
-                            <a href="#" class="glyphicon glyphicon-menu-hamburger"></a>
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                         </div>
                     </div>
 
@@ -90,10 +91,10 @@
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-pencil"></a>
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
-                            <a href="#" class="glyphicon glyphicon-remove"></a>
-                            <a href="#" class="glyphicon glyphicon-menu-hamburger"></a>
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                         </div>
                     </div>
 
@@ -107,10 +108,30 @@
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-pencil"></a>
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
-                            <a href="#" class="glyphicon glyphicon-remove"></a>
-                            <a href="#" class="glyphicon glyphicon-menu-hamburger"></a>
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <form>
+                                <div class="form-group">
+                                    <label for="newForm">Gender:</label>
+                                    <select class="form-control" id="gender">
+                                        <option>Female</option>
+                                        <option>Male</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xs-3">
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                         </div>
                     </div>
 
@@ -130,10 +151,10 @@
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-pencil"></a>
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
-                            <a href="#" class="glyphicon glyphicon-remove"></a>
-                            <a href="#" class="glyphicon glyphicon-menu-hamburger"></a>
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                         </div>
                     </div>
 
@@ -141,22 +162,25 @@
                         <div class="col-xs-9">
                             <form class="form-group">
                                 <label>License Agreement:</label>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="roles" value="Admin">Admin</label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="licenseAgreement" id="licenseAgreementYes" value="Yes">
+                                        Yes
+                                    </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="roles" value="Student">Student</label>
-                                </div>  
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="roles" value="User">User</label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="licenseAgreement" id="licenseAgreementNo" value="No">
+                                        No
+                                    </label>
                                 </div>
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-pencil"></a>
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
-                            <a href="#" class="glyphicon glyphicon-remove"></a>
-                            <a href="#" class="glyphicon glyphicon-menu-hamburger"></a>
+                            <span href="#" class="glyphicon glyphicon-pencil"></span>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
+                            <span href="#" class="glyphicon glyphicon-remove"></span>
+                            <span href="#" class="glyphicon glyphicon-menu-hamburger"></span>
                         </div>
                     </div>
 
@@ -176,14 +200,14 @@
                                         <option>Date</option>
                                         <option>Dropdown</option>
                                         <option>Checkboxes</option>
-                                        <option>Radio Buttons</option>
+                                        <option>Buttons</option>
                                         <option>Paragraph Text Field</option>
                                     </select>
                                 </div>
                             </form>
                         </div>
                         <div class="col-xs-3">
-                            <a href="#" class="glyphicon glyphicon-plus"></a>
+                            <span href="#" class="glyphicon glyphicon-plus"></span>
                         </div>
                     </div>
 
