@@ -64,7 +64,7 @@
             var matchedUser = null;
 
             for (var index = 0; index < users.length; index++) {
-                var currentUser = useres[index];
+                var currentUser = users[index];
                 if (currentUser.username === username && currentUser.password === password) {
                     matchedUser = currentUser;
                     break;
