@@ -13,8 +13,6 @@
         $scope.user = {};
 
         function login (user) {
-            console.log(user.username);
-
             var callbackFunction = function (updatedUser) {
                 $rootScope.currentUser = updatedUser;
             }

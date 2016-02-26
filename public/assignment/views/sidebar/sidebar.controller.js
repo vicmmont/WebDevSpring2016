@@ -9,6 +9,6 @@
         .controller("SideBarController", sidebarController);
 
     function sidebarController() {
-        //$scope.$location = $location;
+
     }
 })();

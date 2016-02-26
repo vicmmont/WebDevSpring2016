@@ -53,9 +53,7 @@
             findAllUsers: findAllUsers,
             createUser: createUser,
             deleteUserById: deleteUserById,
-            updateUser: updateUser,
-            setCurrentUser: setCurrentUser,
-            getCurrentUser: getCurrentUser
+            updateUser: updateUser
         }
 
         return model;
@@ -105,7 +103,6 @@
         }
 
         function updateUser(userId, user, callback) {
-
             for (var index = 0; index < user.length; index++) {
                 if (users[index]._id === userId) {
                     users[index] = user;
@@ -114,14 +111,6 @@
             }
 
             callback(user);
-        }
-
-        function setCurrentUser (user) {
-            $rootScope.currentUser = user;
-        }
-
-        function getCurrentUser () {
-            $rootScope.currentUser;
         }
     }
 })();

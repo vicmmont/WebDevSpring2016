@@ -9,16 +9,15 @@
         .controller("ProfileController", profileController);
 
     function profileController(UserService, $scope, $rootScope) {
-
-        var loggedUser = $rootScope.currentUser;
-        $scope.loggedUser = loggedUser;
+        $scope.update = update;
+        $scope.loggedUser = $rootScope.currentUser;
 
         function update (user) {
             var callbackFunction = function (updatedUser) {
-                $scope.loggedUser = updatedUser;
+                $rootScope.currentUser = updatedUser;
             }
 
-            UserService.findUserByCredentials(username, password, callback);
+            UserService.updateUser(user._id, user, callbackFunction);
         }
     }
 })();

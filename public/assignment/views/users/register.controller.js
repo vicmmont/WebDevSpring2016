@@ -10,14 +10,16 @@
 
     function registerController($location, UserService, $scope) {
         $scope.register = register;
+        $scope.user = {};
 
-        function register (user) {
+        function register (newUser) {
             var callbackFunction = function (registeredUser) {
-                user = registeredUser;
-                $location.url("/profile");
+                $scope.user = registeredUser;
             }
 
-            UserService.createUser(user, callbackFunction);
+            UserService.createUser(newUser, callbackFunction);
+
+            $location.url("/profile");
         }
     }
 })();
