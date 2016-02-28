@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="nav-bar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="visible-xs-inline"><a href="#/home">Home</a></li>
-                <li class="visible-xs-inline"><a href="../users/profile.view.html">Profile</a></li>
-                <li class="visible-xs-inline"><a href="../admin/admin.view.html">Admin</a></li>
-                <li class="visible-xs-inline"><a href="../forms/forms.view.html">Forms</a></li>
+                <li class="visible-xs-inline"><a href="#/profile">Profile</a></li>
+                <li class="visible-xs-inline"><a href="#/admin">Admin</a></li>
+                <li class="visible-xs-inline"><a href="#/form">Forms</a></li>
                 <li ng-show="currentUser.roles.indexOf('admin') >= 0"><a href="#/admin">Admin</a></li>
                 <li ng-hide="currentUser"><a href="#/register">Register</a></li>
                 <li ng-hide="currentUser"><a href="#/login">Login</a></li>
-                <li ng-show="currentUser"><a href="#/profile">Username</a></li>
+                <li ng-show="currentUser"><a href="#/profile">Welcome, {{currentUser.username}}!</a></li>
                 <li ng-show="currentUser" ng-click="logout()"><a href="#/home">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

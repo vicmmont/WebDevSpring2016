@@ -9,46 +9,44 @@
         .factory("UserService", UserService);
 
     function UserService($rootScope) {
-        var users = [
-                        {   "_id":123,
-                            "firstName":"Alice",
-                            "lastName":"Wonderland",
-                            "username":"alice",
-                            "password":"alice",
-                            "roles": ["student"]
-                        },
-                        {   "_id":234,
-                            "firstName":"Bob",
-                            "lastName":"Hope",
-                            "username":"bob",
-                            "password":"bob",
-                            "roles": ["admin"]
-                        },
-                        {   "_id":345,
-                            "firstName":"Charlie",
-                            "lastName":"Brown",
-                            "username":"charlie",
-                            "password":"charlie",
-                            "roles": ["faculty"]
-                        },
-                        {   "_id":456,
-                            "firstName":"Dan",
-                            "lastName":"Craig",
-                            "username":"dan",
-                            "password":"dan",
-                            "roles": ["faculty", "admin"]
-                        },
-                        {   "_id":567,
-                            "firstName":"Edward",
-                            "lastName":"Norton",
-                            "username":"ed",
-                            "password":"ed",
-                            "roles": ["student"]
-                        }
-                    ];
-
         var model = {
-            users: users,
+            users: [
+                {   "_id":123,
+                    "firstName":"Alice",
+                    "lastName":"Wonderland",
+                    "username":"alice",
+                    "password":"alice",
+                    "roles": ["student"]
+                },
+                {   "_id":234,
+                    "firstName":"Bob",
+                    "lastName":"Hope",
+                    "username":"bob",
+                    "password":"bob",
+                    "roles": ["admin"]
+                },
+                {   "_id":345,
+                    "firstName":"Charlie",
+                    "lastName":"Brown",
+                    "username":"charlie",
+                    "password":"charlie",
+                    "roles": ["faculty"]
+                },
+                {   "_id":456,
+                    "firstName":"Dan",
+                    "lastName":"Craig",
+                    "username":"dan",
+                    "password":"dan",
+                    "roles": ["faculty", "admin"]
+                },
+                {   "_id":567,
+                    "firstName":"Edward",
+                    "lastName":"Norton",
+                    "username":"ed",
+                    "password":"ed",
+                    "roles": ["student"]
+                }
+            ],
             findUserByCredentials: findUserByCredentials,
             findAllUsers: findAllUsers,
             createUser: createUser,
@@ -61,8 +59,8 @@
         function findUserByCredentials(username, password, callback) {
             var matchedUser = null;
 
-            for (var index = 0; index < users.length; index++) {
-                var currentUser = users[index];
+            for (var index = 0; index < model.users.length; index++) {
+                var currentUser = model.users[index];
                 if (currentUser.username === username && currentUser.password === password) {
                     matchedUser = currentUser;
                     break;
@@ -73,13 +71,13 @@
         }
 
         function findAllUsers(callback) {
-            callback(users);
+            callback(model.users);
         }
 
         function createUser(user, callback) {
             user._id = (new Date).getTime();
 
-            users.push(user);
+            model.users.push(user);
             $rootScope.currentUser = user;
 
             callback(user);
@@ -88,24 +86,24 @@
         function deleteUserById(userId, callback) {
             var userIndex = -1;
 
-            for (var index = 0; index < users.length; index++) {
-                if (users[index]._id === userId) {
+            for (var index = 0; index < model.users.length; index++) {
+                if (model.users[index]._id === userId) {
                     userIndex = index;
                     break;
                 }
             }
 
             if (userIndex >= 0) {
-                users.splice(userIndex, 1);
+                model.users.splice(userIndex, 1);
             }
 
-            callback(users);
+            callback(model.users);
         }
 
         function updateUser(userId, user, callback) {
-            for (var index = 0; index < user.length; index++) {
-                if (users[index]._id === userId) {
-                    users[index] = user;
+            for (var index = 0; index < model.users.length; index++) {
+                if (model.users[index]._id === userId) {
+                    model.users[index] = user;
                     break;
                 }
             }

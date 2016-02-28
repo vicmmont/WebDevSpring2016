@@ -11,10 +11,12 @@
     function config($routeProvider) {
         $routeProvider
             .when("/forms", {
-                templateUrl: "assignment/views/forms/forms.view.html"
+                templateUrl: "assignment/views/forms/forms.view.html",
+                controller: "FormController"
             })
             .when("/home", {
-                templateUrl: "assignment/views/home/home.view.html"
+                templateUrl: "assignment/views/home/home.view.html",
+                controller: "MainController"
             })
             .when("/register", {
                 templateUrl: "assignment/views/users/register.view.html",
@@ -29,7 +31,8 @@
                 controller: "ProfileController"
             })
             .when("/admin", {
-                templateUrl: "assignment/views/admin/admin.view.html"
+                templateUrl: "assignment/views/admin/admin.view.html",
+                controller: "AdminController"
             })
             .otherwise({
                 redirectTo: "/home"

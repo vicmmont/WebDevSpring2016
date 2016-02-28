@@ -7,8 +7,7 @@
          		<h1>Forms</h1>
 
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a class="tabText" href="#">Forms</a></li>
-                    <li role="presentation"><a class="tabText" href="fields.view.html">Fields</a></li>
+                    <li role="presentation" class="active"><a class="tabText">Forms</a></li>
                 </ul>
 
          		<table class="table table-bordered table-striped">
@@ -22,14 +21,17 @@
          			</tr>
          			<tr>
          				<td><input ng-model="form.title" type="text" class="form-control" id="inputText1" placeholder="My Form"></td>
-         				<td><button ng-click="addForm(form)" class="glyphicon glyphicon-plus" aria-hidden="true"></button>
-         					<span ng-click="updateForm(form)" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+         				<td>
+							<button ng-click="addForm(currentUser._id, form)" class="glyphicon glyphicon-plus" aria-hidden="true"></button>
+         					<button ng-click="updateForm(form)" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
          				</td>
          			</tr>
-					<tr ng-repeat="form in FormController.forms">
+					<tr ng-repeat="form in 	forms">
 						<td>{{form.title}}</td>
-						<td></td>
-						<td></td>
+						<td>
+							<button ng-click="deleteForm($index)" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+							<button ng-click="selectForm($index)" class="glyphicon glyphicon-ok" aria-hidden="true"></button>
+						</td>
 					</tr>
          		</table>
 				

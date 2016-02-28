@@ -14,7 +14,6 @@
 
         function logout() {
             $rootScope.currentUser = null;
-            console.log($scope.currentUser);
             $location.url("/home");
         }
     }

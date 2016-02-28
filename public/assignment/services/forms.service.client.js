@@ -13,7 +13,7 @@
             data : [
                 {"_id": "000", "title": "Contacts", "userId": 123},
                 {"_id": "010", "title": "ToDo",     "userId": 123},
-                {"_id": "020", "title": "CDs",      "userId": 234},
+                {"_id": "020", "title": "CDs",      "userId": 234}
             ],
             createFormForUser : createFormForUser,
             findAllFormsForUser : findAllFormsForUser,
@@ -32,7 +32,7 @@
         }
 
         function findAllFormsForUser(userId, callback) {
-            var forms = api.data.forms;
+            var forms = api.data;
             var userForms = [];
 
             for (var index in forms) {
@@ -49,24 +49,24 @@
         function deleteFormById(formId, callback) {
             var formIndex = null;
 
-            for (var index in api.data.forms) {
-               if (api.data.forms[index]._id === formId) {
+            for (var index in api.data) {
+               if (api.data[index]._id === formId) {
                     formIndex = index;
                    break;
                }
             }
 
             if (formIndex) {
-                api.data.forms.splice(formIndex, 1);
+                api.data.splice(formIndex, 1);
             }
 
-            callback(api.data.forms);
+            callback(api.data);
         }
 
         function updateFormById(formId, newForm, callback) {
-            for (var index in api.data.forms) {
-                if (api.data.forms[index]._id === formId) {
-                    api.data.forms[index] = newForm;
+            for (var index in api.data) {
+                if (api.data[index]._id === formId) {
+                    api.data[index] = newForm;
                     break;
                 }
             }
