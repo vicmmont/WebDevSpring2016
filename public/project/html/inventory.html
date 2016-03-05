@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Victor's Store</title>
+
+    <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="glyphicon glyphicon-shopping-cart navbar-brand visible-xs" href="shopping-cart.html"></a>
+            <a class="navbar-brand visible-xs" href="index.html">Victor's Store</a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+
+        <div class="row visible-sm visible-md visible-lg">
+            <div class="col-xs-3">
+                <a class="navbar-brand" href="#">Victor's Store</a>
+            </div>
+            <div class="col-xs-7"></div>
+            <div class="col-xs-2 text-right">
+                <a href="register.html">Log In</a>/<a href="register.html">Register</a>
+            </div>
+        </div>
+        <hr class="visible-md visible-lg" style="margin:0">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="inventory.html">Women<span class="sr-only">(current)</span></a></li>
+                <li><a href="inventory.html">Men</a></li>
+                <li><a href="inventory.html">Boys</a></li>
+                <li><a href="inventory.html">Girls</a></li>
+                <li class="visible-xs"><a href="register.html">Log In</a></li>
+                <li class="visible-xs"><a href="register.html">Register</a></li>
+            </ul>
+            <a href="shopping-cart.html" class="glyphicon glyphicon-shopping-cart navbar-brand hidden-xs navbar-right" style="font-size:30px;color:black" href=""></a>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<!--- Main Items-->
+<div class="container">
+    <h1 class="text-center">Men's Shirts</h1>
+    <!-- Searching and Sorting-->
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-default btn-block" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Filter by
+            </button>
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    ...
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-default btn-block" role="button" data-toggle="collapse" href="#sorting" aria-expanded="false" aria-controls="sorting">
+                Sort By
+                <span class="caret"></span>
+            </button>
+            <div class="collapse" id="sorting">
+                <ul class="well text-center">
+                    <p><a href="#">Price: Low to High</a></p>
+                    <p><a href="#">Price: High to Low</a></p>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+        <div class="col-sm-4">
+            <a href="product.html"><img class="img-responsive" src="../images/producto.jpeg" alt="Product"></a>
+            <p>MEN EASY CARE SLIM FIT CHECK LONG SLEEVE SHIRT</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Victor Store</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td><input ng-model="user.firstName" type="text" class="form-control"></td>
+            <td><input ng-model="user.lastName" type="text" class="form-control"></td>
+            <td><input ng-model="user.email" type="email" class="form-control"></td>
+            <td><input ng-model="user.password" type="text" class="form-control"></td>
+            <td><input ng-model="user.address" type="text" class="form-control"></td>
+            <td><input ng-model="user.city" type="text" class="form-control"></td>
+            <td><input ng-model="user.state" type="text" class="form-control"></td>
+            <td><input ng-model="user.country" type="text" class="form-control"></td>
+            <td>
+                <button ng-click="addUser(user)" class="glyphicon glyphicon-plus" aria-hidden="true"></button>
+                <button ng-click="updateUser(user)" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
+            </td>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.state}}</td>
+            <td>{{user.country}}</td>
+            <td>
+                <button ng-click="deleteUser($index)" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+                <button ng-click="selectUser($index)" class="glyphicon glyphicon-ok" aria-hidden="true"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

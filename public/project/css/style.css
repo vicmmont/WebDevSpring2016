@@ -1,0 +1,84 @@
+body {
+	font-size: 16px;
+}
+
+.col-xs-5 {
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+.navbar {
+	background-color: #0E4C97;
+	border-bottom: 3px solid #0E4C97;
+	color: white;
+	margin-bottom: 0;
+}
+
+.navbar-header > .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav> .active > a, 
+.navbar-inverse .navbar-nav> .active > a:focus,
+.navbar-inverse .navbar-nav> .active > a:hover,
+.navbar-inverse .navbar-nav> li > a:hover {
+	background-color: white;
+	color: #0E4C97;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus,
+.nav-sidebar > li > a:hover {
+  color: #fff;
+  background-color: #0E4C97;
+}
+
+.glyphicon-menu-hamburger,
+.glyphicon-menu-hamburger:hover {
+	color: black;
+}
+
+.glyphicon-ok,
+.glyphicon-ok:hover {
+	color: #1CB162;
+}
+
+.glyphicon-pencil,
+.glyphicon-pencil:hover {
+	color: #BDBD14;
+}
+
+.glyphicon-plus,
+.glyphicon-plus:hover {
+	color: #1863F0;
+}
+
+.glyphicon-remove,
+.glyphicon-remove:hover {
+	color: #E24D21;
+}
+
+.row {
+	position: relative;
+}
+
+.sidebar {
+	background-color: #EFEFF1;
+	margin: 0;
+	top: 50px;
+}
+
+.sidebar > ul > li > a {
+	color: #0E4C97;
+}
+
+.tabText {
+	color: #0E4C97;
+}
+
+.topForm {
+	padding-top: 15px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Victor's Store</title>
+</head>
+<body>
+    <h1>Clothes</h1>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Colors</th>
+            <th>Sizes</th>
+            <th>Quantity</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><input ng-model="clothes.name" type="text" class="form-control"></td>
+            <td><input ng-model="clothes.price" type="text" class="form-control"></td>
+            <td><input ng-model="clothes.colors" ng-list required></td>
+            <td><input ng-model="clothes.sizes" ng-list required></td>
+            <td><input ng-model="clothes.quantity" type="text" class="form-control"></td>
+            <td><input ng-model="clothes.description" type="textarea" class="form-control"></td>
+            <td>
+                <button ng-click="addClothes(clothes)" class="glyphicon glyphicon-plus" aria-hidden="true"></button>
+                <button ng-click="updateClothes(clothes)" class="glyphicon glyphicon-pencil" aria-hidden="true"></button>
+            </td>
+        </tr>
+        <tr ng-repeat="clothes in clothingItems">
+            <td>{{clothes.name}}</td>
+            <td>{{clothes.price}}</td>
+            <td>{{clothes.colors}}</td>
+            <td>{{clothes.sizes}}</td>
+            <td>{{clothes.quantity}}</td>
+            <td>{{clothes.description}}</td>
+            <td>
+                <button ng-click="deleteClothes($index)" class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+                <button ng-click="selectClothes($index)" class="glyphicon glyphicon-ok" aria-hidden="true"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
