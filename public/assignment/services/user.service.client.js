@@ -51,7 +51,7 @@
             findAllUsers: findAllUsers,
             createUser: createUser,
             deleteUserById: deleteUserById,
-            updateUser: updateUser
+            updateClothes: updateClothes
         }
 
         return model;
@@ -100,7 +100,7 @@
             callback(model.users);
         }
 
-        function updateUser(userId, user, callback) {
+        function updateClothes(userId, user, callback) {
             for (var index = 0; index < model.users.length; index++) {
                 if (model.users[index]._id === userId) {
                     model.users[index] = user;

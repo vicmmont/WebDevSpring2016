@@ -17,7 +17,7 @@
                 $rootScope.currentUser = updatedUser;
             }
 
-            UserService.updateUser(user._id, user, callbackFunction);
+            UserService.updateClothes(user._id, user, callbackFunction);
         }
     }
 })();

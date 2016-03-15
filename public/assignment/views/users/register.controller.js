@@ -17,7 +17,7 @@
                 $scope.user = registeredUser;
             }
 
-            UserService.createUser(newUser, callbackFunction);
+            UserService.createForm(newUser, callbackFunction);
 
             $location.url("/profile");
         }

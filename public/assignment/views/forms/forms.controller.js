@@ -9,29 +9,29 @@
         .controller("FormController", formController);
 
     function formController(FormService, $scope, $rootScope) {
-        $scope.addForm = addForm;
-        $scope.updateForm = updateForm;
-        $scope.deleteForm = deleteForm;
-        $scope.selectForm = selectForm;
+        $scope.addClothes = addClothes;
+        $scope.updateClothes = updateClothes;
+        $scope.deleteClothes = deleteClothes;
+        $scope.selectClothes = selectClothes;
 
         $scope.form = {};
         //Retrieve forms from FormService
         function retrieveForms () {
-            FormService.findAllFormsForUser($rootScope.currentUser._id, function (returnedForms) {
+            FormService.getClothes($rootScope.currentUser._id, function (returnedForms) {
                 $scope.forms = returnedForms;
             });
         }
         retrieveForms();
 
-        function addForm(userId, form) {
+        function addClothes(userId, form) {
             var callbackFunction = function(newForm) {
                 retrieveForms();
                 $scope.form = {};
             }
-            FormService.createFormForUser(userId, form, callbackFunction)
+            FormService.createClothes(userId, form, callbackFunction)
         }
 
-        function selectForm(index) {
+        function selectClothes(index) {
             $scope.form = {
                 title: $scope.forms[index].title,
                 userId: $scope.forms[index].userId,
@@ -39,8 +39,8 @@
             }
         }
 
-        function updateForm(form) {
-            FormService.updateFormById(form._id, form, function(updatedForm) {
+        function updateClothes(form) {
+            FormService.updateClothes(form._id, form, function(updatedForm) {
                 for (var index in $scope.forms) {
                     if ($scope.forms[index]._id === form._id) {
                         $scope.forms[index] = updatedForm;
@@ -51,10 +51,10 @@
             })
         }
 
-        function deleteForm(index) {
+        function deleteClothes(index) {
             var form = $scope.forms[index];
 
-            FormService.deleteFormById(form._id, function(remainingForms) {
+            FormService.deleteClothes(form._id, function(remainingForms) {
                 retrieveForms();
                 $scope.form = {};
             })
