@@ -13,11 +13,13 @@
         $scope.loggedUser = $rootScope.currentUser;
 
         function update (user) {
-            var callbackFunction = function (updatedUser) {
-                $rootScope.currentUser = updatedUser;
-            }
-
-            UserService.updateClothes(user._id, user, callbackFunction);
+            UserService
+                .updateUser(userId, user)
+                .then(function(response) {
+                    if (response.data) {
+                        $rootScope.currentUser = response.data;
+                    }
+                });
         }
     }
 })();

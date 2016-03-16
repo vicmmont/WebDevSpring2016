@@ -16,7 +16,7 @@ module.exports = function() {
                 {"_id": "666", "label": "Email", "type": "EMAIL", "placeholder": "Email"}
             ]
         },
-        {"_id": "010", "title": "ToDo", "userId": 234
+        {"_id": "010", "title": "ToDo", "userId": 234,
             "fields": [
                 {"_id": "777", "label": "Title", "type": "TEXT", "placeholder": "Title"},
                 {"_id": "888", "label": "Description", "type": "TEXTAREA", "placeholder": "Title"},
@@ -30,7 +30,7 @@ module.exports = function() {
         findFormById: findFormById,
         findAllForms: findAllForms,
         updateForm: updateForm,
-        deleteForm: deleteForm,
+        deleteField: deleteForm,
         findFormByTitle: findFormByTitle,
         findFormsForUser: findFormsForUser,
         findFieldsForForm: findFieldsForForm,
