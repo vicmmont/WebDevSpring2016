@@ -12,7 +12,7 @@ module.exports = function (app, model) {
     function updateFormById (req, res) {
         var id = req.params.formId;
         var form = req.body;
-        form = model.updateForm(id, form);
+        form = model.updateUser(id, form);
 
         if(form) {
             res.json(form);
@@ -28,7 +28,7 @@ module.exports = function (app, model) {
         form._id = now.getTime();
         form.userId = userId;
 
-        res.send (model.createForm(form));
+        res.send (model.createUser(form));
     }
 
     function getFormsForUser (req, res) {
@@ -39,7 +39,7 @@ module.exports = function (app, model) {
 
     function getFormById (req, res) {
         var id = req.params.formId;
-        var form = model.findFormById(id);
+        var form = model.findUserById(id);
         if(form) {
             res.json(form);
             return;
@@ -49,8 +49,8 @@ module.exports = function (app, model) {
 
     function deleteFormById (req, res) {
         var id = req.params.formId;
-        model.deleteField(id);
+        model.deleeUser(id);
 
-        res.json (model.findAllForms());
+        res.json (model.findAllUsers());
     }
 }

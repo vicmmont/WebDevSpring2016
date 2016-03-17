@@ -12,7 +12,7 @@ module.exports = function (app, model) {
     function updateFormFieldById (req, res) {
         var formId = req.params.formId;
         var fieldId = req.params.fieldId;
-        var form = model.findFormById(formId);
+        var form = model.findUserById(formId);
         var field = req.body;
 
         for (index in form.fields) {
@@ -22,7 +22,7 @@ module.exports = function (app, model) {
             }
         }
 
-        model.updateForm(formId, form);
+        model.updateUser(formId, form);
 
         res.json(form.fields);
     }
@@ -34,17 +34,17 @@ module.exports = function (app, model) {
         field._id = now.getTime();
 
         //retrieve form, add field, update form with new field
-        var form = model.findFormById(formId);
+        var form = model.findUserById(formId);
         form.fields.push(field);
 
-        model.updateForm(formId, form);
+        model.updateUser(formId, form);
 
-        res.send (model.findFormById(formId).fields);
+        res.send (model.findUserById(formId).fields);
     }
 
     function getFieldsForForm (req, res) {
         var formId = req.params.formId;
-        var form = model.findFormById(formId);
+        var form = model.findUserById(formId);
         res.json(form.fields);
     }
 
@@ -52,7 +52,7 @@ module.exports = function (app, model) {
         var formId = req.params.formId;
         var fieldId = req.params.fieldId;
 
-        var form = model.findFormById(formId);
+        var form = model.findUserById(formId);
 
         for (var index in form.fields) {
             if (form.fields[index]._id === fieldId) {
@@ -67,7 +67,7 @@ module.exports = function (app, model) {
         var formId = req.params.formId;
         var fieldId = req.params.fieldId;
 
-        model.deleteField(id);
+        model.deleeUser(id);
 
         res.json (model.findFieldsForForm(formId));
     }

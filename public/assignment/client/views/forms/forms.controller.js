@@ -10,8 +10,8 @@
 
     function formController(FormService, $scope, $rootScope) {
         $scope.addField = addField;
-        $scope.updateForm = updateForm;
-        $scope.deleteField = deleteForm;
+        $scope.updateUser = updateForm;
+        $scope.deleeUser = deleteForm;
         $scope.selectForm = selectForm;
 
         $scope.form = {};

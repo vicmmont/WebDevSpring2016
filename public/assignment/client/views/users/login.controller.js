@@ -13,7 +13,6 @@
         $scope.user = {};
 
         function login (user) {
-            //$rootScope.currentUser = updatedUser;
             UserService
                 .findUserByCredentials(user.username, user.password)
                 .then(function(response){

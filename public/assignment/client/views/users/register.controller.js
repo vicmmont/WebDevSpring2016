@@ -18,9 +18,12 @@
                 .createUser(newUser)
                 .then(function(response) {
                     if(response.data) {
-                        $scope.user = registeredUser;
-                        $rootScope.currentUser = user;
+                        $scope.user = response.data;
+                        $rootScope.currentUser = $scope.user;
                         $location.url("/profile");
+                        console.log("current user is: " + response.data);
+                    } else {
+                        console.log("no data received!");
                     }
                 });
         }

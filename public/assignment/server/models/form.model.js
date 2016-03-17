@@ -26,11 +26,11 @@ module.exports = function() {
     ];
 
     var api = {
-        createForm: createForm,
-        findFormById: findFormById,
-        findAllForms: findAllForms,
-        updateForm: updateForm,
-        deleteField: deleteForm,
+        createUser: createForm,
+        findUserById: findFormById,
+        findAllUsers: findAllForms,
+        updateUser: updateForm,
+        deleeUser: deleteForm,
         findFormByTitle: findFormByTitle,
         findFormsForUser: findFormsForUser,
         findFieldsForForm: findFieldsForForm,

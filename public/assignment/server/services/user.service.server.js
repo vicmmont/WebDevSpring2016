@@ -3,11 +3,11 @@
  */
 module.exports = function (app, model) {
 
+    app.post("/api/assignment/user", createUser);
     app.get("/api/assignment/user", getAllUsers);
     app.get("/api/assignment/user/:id", getUserById);
     app.get("/api/assignment/user?username=username", getUserByUsername);
     app.get("/api/assignment/user?username=alice&password=wonderland", getUserByCredentials);
-    app.post("/api/assignment/user", createUser);
     app.delete("/api/assignment/user/:id", deleteUserById);
     app.put("/api/assignment/user/:id", updateUserById);
 
@@ -31,8 +31,26 @@ module.exports = function (app, model) {
     }
 
     function getAllUsers (req, res) {
-        var users = model.findAllUsers();
-        res.json(users);
+        var username = req.query.username;
+        var password = req.query.password;
+
+        if (username && password) {
+            var credentials = {
+                username: username,
+                password: password
+            };
+            var user = model.findUserByCredentials(credentials);
+
+            if (user) {
+                res.json(user);
+                return;
+            }
+            res.send(null);
+        }
+        else {
+            var users = model.findAllUsers();
+            res.json(users);
+        }
     }
 
     function getUserById (req, res) {
@@ -64,6 +82,7 @@ module.exports = function (app, model) {
     }
 
     function getUserByCredentials(req, res) {
+        console.log("Inside user by credentials");
         var username = req.query.username;
         var password = req.query.password;
         var credentials = {

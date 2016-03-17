@@ -13,13 +13,28 @@
         $scope.loggedUser = $rootScope.currentUser;
 
         function update (user) {
+            console.log("updating user" + user._id + user.email);
             UserService
-                .updateUser(userId, user)
-                .then(function(response) {
-                    if (response.data) {
+                .updateUser(user._id, user)
+                .then(function() {
+                    return UserService.findUserByCredentials(user.username, user.password);
+                })
+                .then(function(response){
+                    if (response.data){
                         $rootScope.currentUser = response.data;
+                        console.log("hooray!");
                     }
                 });
+
+
+                /*.then(function(response) {
+                    if (response.data) {
+                        $rootScope.currentUser = response.data;
+                        console.log("updated user!");
+                    } else {
+                        console.log("no data");
+                    }
+                });*/
         }
     }
 })();

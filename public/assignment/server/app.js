@@ -2,7 +2,6 @@
  * Created by VictorMonterroso on 3/14/16.
  */
 module.exports = function (app) {
-    console.log("Ran server app.js");
     var userModel = require("./models/user.model.js")();
     var formModel = require("./models/form.model.js")();
 

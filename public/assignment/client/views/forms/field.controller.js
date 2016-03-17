@@ -27,7 +27,7 @@
         init();
 
         vm.addField = addField;
-        $vm.deleteField = deleteField;
+        $vm.deleeUser = deleteField;
 
         function addField(fieldType) {
             var field = null;

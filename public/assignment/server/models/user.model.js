@@ -11,11 +11,11 @@ module.exports = function() {
     ];
 
     var api = {
-        createForm: createUser,
-        findFormById: findUserById,
-        findAllForms: findAllUsers,
-        updateForm: updateUser,
-        deleteField: deleteUser,
+        createUser: createUser,
+        findUserById: findUserById,
+        findAllUsers: findAllUsers,
+        updateUser: updateUser,
+        deleeUser: deleteUser,
         findUserByUsername: findUserByUsername,
         findUserByCredentials: findUserByCredentials
     };
@@ -32,7 +32,7 @@ module.exports = function() {
     function updateUser (id, user) {
         for (var index in users) {
             if (users[index]._id === id) {
-                users[index] = user;
+                users[index].email = user.email;
             }
         }
     }

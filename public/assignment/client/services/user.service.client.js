@@ -34,9 +34,7 @@
 
         function createUser(user) {
             user._id = (new Date).getTime();
-
             return $http.post("/api/assignment/user", user);
-            //$rootScope.currentUser = user;
         }
 
         function deleteUserById(userId) {
@@ -44,6 +42,7 @@
         }
 
         function updateUser(userId, user) {
+            console.log("sending: " + "/api/assignment/user/" + userId, user);
             return $http.put("/api/assignment/user/" + userId, user);
         }
     }
